@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-orange-700 py-6 px-3 text-white">
+    <nav className="bg-orange-700 py-6 px-3 text-white ">
       <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
         {open ? <RxCross2 /> : <BiMenu />}
       </div>
