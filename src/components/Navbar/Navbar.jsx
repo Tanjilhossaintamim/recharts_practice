@@ -14,11 +14,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="bg-orange-700 py-6 px-3 text-white">
       <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
         {open ? <RxCross2 /> : <BiMenu />}
       </div>
-      <ul className={`${open ? "" : "hidden"} md:flex md:space-x-5`}>
+      <ul
+        className={`absolute ${
+          open ? "top-16" : "-top-60"
+        } duration-1000   bg-orange-700 shadow-lg md:shadow-none md:static md:flex md:space-x-5`}
+      >
         {routes.map((route) => (
           <Link key={route.id} route={route} />
         ))}
